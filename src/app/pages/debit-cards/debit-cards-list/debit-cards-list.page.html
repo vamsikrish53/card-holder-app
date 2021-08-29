@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Debit cards</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="card-wrap" *ngFor="let card of debitCardsList?.cards">
+    <div class="card">
+      <div class="bank-info">
+        <div class="label"> {{card.bankName}} </div>
+        <div class="mastercard-logo"> <img src="../../../../assets/mastercard.png"> </div>
+      </div>
+      <div class="details">
+        <div class="label number"> {{card.number}} </div>
+        <div class="label expiry"> {{card.expiryDate}} </div>
+        <div class="label name"> {{card.name}} </div>        
+        <div class="label cvv"> {{card.cvv}} </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="debitCardsList?.total == 0 || !debitCardsList">
+    <h1> No Cards Found Try adding one from the button below </h1>
+  </div>
+
+</ion-content>
+<!-- fab placed to the bottom start -->
+<ion-fab vertical="bottom" horizontal="end" slot="fixed" (click)="openAddCardModal()">
+  <ion-fab-button>
+    <ion-icon name="arrow-up-circle"></ion-icon>
+  </ion-fab-button>
+</ion-fab>

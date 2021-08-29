@@ -1,0 +1,199 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Dashboard
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Dashboard</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card routerLink="/tabs/dashboard-tab/debit-cards-list">
+          <ion-card-content>
+            <div class="card-group">
+              <div class="card-details">
+                <div class="icon">
+                  <fa-icon icon="credit-card"></fa-icon>
+                </div>
+                <div class="count" *ngIf="cardDetails?.debitCards?.total > 0">
+                  {{cardDetails?.debitCards?.total}}
+                </div>
+                <div class="card-label">
+                  <label>
+                    Debit cards
+                  </label>
+                </div>
+              </div>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card routerLink="/tabs/dashboard-tab/credit-cards-list">
+          <ion-card-content>
+            <div class="card-group">
+              <div class="card-details">
+                <div class="icon">
+                  <fa-icon [icon]="['fab', 'cc-visa']"></fa-icon>
+                </div>
+                <div class="count" *ngIf="cardDetails?.creditCards.total > 0">
+                  {{cardDetails?.creditCards.total}}
+                </div>
+                <div class="card-label">
+                  <label>
+                    Credit cards
+                  </label>
+                </div>
+              </div>
+              
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-card-content>
+            <div class="card-group">
+              <div class="card-details">
+                <div class="icon">
+                  <fa-icon icon="id-card"></fa-icon>
+                </div>
+                <div class="count" *ngIf="cardDetails?.aadharCards.total > 0">
+                  {{cardDetails?.aadharCards.total}}
+                </div>
+                <div class="card-label">
+                  <label>
+                    Aadhar cards
+                  </label>
+                </div>
+              </div>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card>
+          <ion-card-content>
+            <div class="card-group">
+              <div class="card-details">
+                <div class="icon">
+                  <fa-icon icon="id-badge"></fa-icon>
+                </div>
+                <div class="count" *ngIf="cardDetails?.panCards.total > 0">
+                  {{cardDetails?.panCards.total}}
+                </div>
+                <div class="card-label">
+                  <label>
+                    Pan cards
+                  </label>
+                </div>
+              </div>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-card-content>
+            <div class="card-group">
+              <div class="card-details">
+                <div class="icon">
+                  <fa-icon icon="id-card-alt"></fa-icon>
+                </div>
+                <div class="count" *ngIf="cardDetails?.drivingLicenses.total > 0">
+                  {{cardDetails?.drivingLicenses.total}}
+                </div>
+                <div class="card-label">
+                  <label>
+                    Driving Licenses
+                  </label>
+                </div>
+              </div>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card>
+          <ion-card-content>
+            <div class="card-group">
+              <div class="card-details">
+                <div class="icon">
+                  <fa-icon icon="id-card-alt"></fa-icon>
+                </div>
+                <div class="count" *ngIf="cardDetails?.registrationCards.total > 0">
+                  {{cardDetails?.registrationCards.total}}
+                </div>
+                <div class="card-label">
+                  <label>
+                    Registration cards
+                  </label>
+                </div>
+              </div>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-card-content>
+            <div class="card-group">
+              <div class="card-details">
+                <div class="icon">
+                  <fa-icon icon="passport"></fa-icon>
+                </div>
+                <div class="count" *ngIf="cardDetails?.passports.total > 0">
+                  {{cardDetails?.passports.total}}
+                </div>
+                <div class="card-label">
+                  <label>
+                    Passports
+                  </label>
+                </div>
+              </div>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card>
+          <ion-card-content>
+            <div class="card-group">
+              <div class="card-details">
+                <div class="icon">
+                  <fa-icon icon="fingerprint"></fa-icon>
+                </div>
+                <div class="count" *ngIf="cardDetails?.voterCards.total > 0">
+                  {{cardDetails?.voterCards.total}}
+                </div>
+                <div class="card-label">
+                  <label>
+                    Voter cards
+                  </label>
+                </div>
+              </div>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+</ion-content>

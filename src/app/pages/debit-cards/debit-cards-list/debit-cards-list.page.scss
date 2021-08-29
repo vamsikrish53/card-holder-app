@@ -1,0 +1,73 @@
+.add-new-btn {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    --border-radius: 50px;
+    width: 30%;
+}
+
+.card-wrap {
+    margin: 15px;
+    position: relative;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    border-radius: 8px;
+    position: relative;
+    color: #ccc;
+    font-family: "Ubuntu Mono", monospace;
+    box-shadow: 3px 3px 5px 2px rgba(0, 0, 0, 0.5);
+    background: #004768;
+    background: -moz-linear-gradient(left, #004768 0%, #00325b 100%);
+    background: -webkit-linear-gradient(left, #004768 0%, #00325b 100%);
+    background: linear-gradient(to right, #004768 0%, #00325b 100%);
+
+    & .bank-info {
+        display: flex;
+        justify-content: space-between;
+        flex-basis: 80%;
+        padding: 20px;
+
+        & .mastercard-logo {
+            position: relative;
+            top: -20px;
+            right: -10px;
+
+            & img {
+                width: 80px;
+                height: 80px;
+            }
+        }
+
+        & .visa-logo {
+            position: relative;
+            top: 0px;
+            right: -5px;
+
+            & img {
+                width: 80px;
+                height: 30px;
+            }
+        }
+    }
+
+    & .label {
+        font-size: 21px;
+    }
+
+    .details {
+        display: flex;
+        flex-flow: wrap ;
+        margin: 15px;
+        & .number {
+            flex-basis: 86%;
+        }
+        & .name {
+            flex-basis: 86%;
+        }
+    }
+
+}

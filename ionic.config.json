@@ -1,0 +1,7 @@
+{
+  "name": "Card Holder",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

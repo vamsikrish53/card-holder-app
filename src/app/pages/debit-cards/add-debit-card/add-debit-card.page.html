@@ -1,0 +1,40 @@
+<ion-content>
+  <div class="header">
+    Add your debit card
+  </div>
+
+  <div class="form-content">
+    <form [formGroup]="form" class="example-form ">
+      <mat-form-field class="example-full-width">
+        <mat-label>Card Number</mat-label>
+        <input matInput formControlName="num" type="text" id="dc-number" card-num OnlyNumber="true">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Expiry</mat-label>
+        <input matInput formControlName="expiry" type="text" id="dc-number" card-num OnlyNumber="true">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>CVV</mat-label>
+        <input matInput formControlName="cvv" type="text" id="dc-number" card-num OnlyNumber="true">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Card Holder Name</mat-label>
+        <input matInput formControlName="name" type="text" id="dc-name">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Bank Name</mat-label>
+        <input matInput formControlName="bankName" type="text" id="dc-name">
+      </mat-form-field>
+
+      <ion-button (click)="saveDetails()">
+        <ion-label>Save</ion-label>
+      </ion-button>
+    </form>
+
+  </div>
+
+</ion-content>
